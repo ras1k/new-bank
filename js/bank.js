@@ -24,12 +24,17 @@ document.getElementById('btn-withdraw').addEventListener('click', function(){
 
     const withd = document.getElementById('withdraw-amount');
     const withdAmount = parseFloat(withd.innerText);
+    const sum1 = withdraw + withdAmount;
     // console.log(withdAmount);
-
+ 
     const balance = document.getElementById('balance-amount');
     const balanceAmount = parseFloat(balance.innerText);
 
-    const sum1 = withdraw + withdAmount;
+    if (sum1 > balanceAmount){
+        alert('Imsufficient Balance');
+        return;
+    }
+
     const sum2 = balanceAmount - sum1;
     
     balance.innerText = sum2;
