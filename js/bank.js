@@ -2,6 +2,12 @@ document.getElementById('btn-deposit').addEventListener('click', function(){
     const depositAmount = document.getElementById('deposit-field');
     const deposit = parseFloat(depositAmount.value);
 
+    depositAmount.value = '';
+    if (isNaN(deposit)){
+        alert('Please Enter a valid number');
+        return;
+    }
+
     const depo = document.getElementById('deposit-amount');
     const depoAmount = parseFloat(depo.innerText);
 
@@ -22,6 +28,12 @@ document.getElementById('btn-withdraw').addEventListener('click', function(){
     const withdrawAmount = document.getElementById('withdraw-field');
     const withdraw = parseFloat(withdrawAmount.value);
 
+    withdrawAmount.value = '';
+    if (isNaN(withdraw)){
+        alert('Please Enter a valid number');
+        return;
+    }
+
     const withd = document.getElementById('withdraw-amount');
     const withdAmount = parseFloat(withd.innerText);
     const sum1 = withdraw + withdAmount;
@@ -30,6 +42,7 @@ document.getElementById('btn-withdraw').addEventListener('click', function(){
     const balance = document.getElementById('balance-amount');
     const balanceAmount = parseFloat(balance.innerText);
 
+    withdrawAmount.value = '';
     if (sum1 > balanceAmount){
         alert('Imsufficient Balance');
         return;
