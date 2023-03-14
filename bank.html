@@ -21,19 +21,35 @@
             <div class="grid grid-cols-3 gap-4 bg w-9/12 mx-auto text-white">
                 <div class="bg-green-500 p-8 rounded-lg">
                     <h4 class="text-2xl">Deposit</h4>
-                    <h2 class="text-5xl">$00</h2>
+                    <h2 class="text-5xl">$<span id="deposit-amount">00</span></h2>
                 </div>
                 <div class="bg-yellow-500 p-8 rounded-lg">
                     <h4 class="text-2xl">Withdraw</h4>
-                    <h2 class="text-5xl">$00</h2>
+                    <h2 class="text-5xl">$<span id="withdraw-amount">00</span></h2>
                 </div>
                 <div class="bg-violet-500 p-8 rounded-lg">
                     <h4 class="text-2xl">Balance</h4>
-                    <h2 class="text-5xl">$1240</h2>
+                    <h2 class="text-5xl">$<span id="balance-amount">1240</span></h2>
+                </div>
+            </div>
+        </section>
+        <section class="mt-12">
+            <div class="grid grid-cols-2 gap-4 bg w-9/12 mx-auto">
+                <div class="bg-fuchsia-500 p-8 rounded-lg">
+                    <h4 class="text-2xl text-white">Please Deposit</h4>
+                        <input type="number" class="mb-2 px-3 rounded mt-2" placeholder="$ Enter Amount" name="" id="deposit-field">
+                        <button id="btn-deposit" class="bg-amber-400 px-8 text-white font-medium py-2 rounded-lg hover:bg-sky-700">Deposit</button>
+                </div>
+                <div class="bg-rose-400 p-8 rounded-lg">
+                    <h4 class="text-2xl text-white">Please Withdraw</h4>
+                    <input type="number" class="mb-2 px-3 rounded mt-2" placeholder="$ Enter Amount" name="" id="withdraw-field">
+                        <button id="btn-withdraw" class="bg-amber-400 px-8 text-white font-medium py-2 rounded-lg hover:bg-sky-700">Withdraw</button>
                 </div>
             </div>
         </section>
     </main>
+
+    <script src="js/bank.js"></script>
 </body>
 
 </html>
